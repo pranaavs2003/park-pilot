@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .logo_text{
+        @apply text-[#e4c83a] text-9xl font-extrabold text_shadow no_text_select
+    }    
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #161819; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #5a5a5a;
+    border-radius: 3px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.text_shadow{
+    text-shadow: 10px 10px #9ba60198;
+    cursor: default;
+    transition: 0.5s;
+}
+
+.image_blur{
+    filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+
+.text_shadow:hover{
+    text-shadow: 6px 6px #9ba6014e;
+    cursor: default;
+    transition: 0.2s;
+}
+
+.small_text_shadow{
+    text-shadow: 1px 1px #9ba60198;
+    cursor: default;
+}
+
+.small_text_shadow:hover{
+    text-shadow: 2px 2px #9ba6014e;
+    cursor: default;
+    transition: 0.2s;
+}
+
+.no_text_select{
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
