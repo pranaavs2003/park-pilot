@@ -13,7 +13,6 @@ type Props = {
 
 export default function SessionProvider({children, session} : Props) {
   const { user, setUser } = useContext(UserContext);
-  
 
   useEffect( () => {
     const checkUser = async () => {

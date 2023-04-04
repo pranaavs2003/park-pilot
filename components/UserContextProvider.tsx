@@ -12,6 +12,8 @@ interface UserDataProps {
 interface UserContextProps {
     user: UserDataProps;
     setUser: Dispatch<SetStateAction<UserDataProps>>;
+    isRegistered: boolean;
+    setIsRegistered: Dispatch<SetStateAction<boolean>>;
 };
 
 interface UserContextProviderProps{
@@ -27,6 +29,8 @@ export const UserContext = createContext<UserContextProps>({
         username: ""
     },
     setUser: () => {},
+    isRegistered: false,
+    setIsRegistered: () => {},
 });
 
 export default function UserContextProvider({ children } : UserContextProviderProps) {
@@ -39,9 +43,10 @@ export default function UserContextProvider({ children } : UserContextProviderPr
             username: ""
         }
     );
+    const [isRegistered, setIsRegistered] = useState<boolean>(false);
 
     return(
-        <UserContext.Provider value={{ user, setUser }} >
+        <UserContext.Provider value={{ user, setUser, isRegistered, setIsRegistered }} >
             { children }
         </UserContext.Provider>
     );

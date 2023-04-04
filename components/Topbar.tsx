@@ -1,15 +1,18 @@
 'use client'
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
-import { RxHamburgerMenu } from "react-icons/rx"
+import { useRouter } from "next/navigation";
+
 export default function Topbar() {
   const session = useSession();
+  const router = useRouter();
   //console.log(session);
+
   return (
     <div className="w-full h-[8vh] bg-[#1d1d1d] flex justify-between items-center pl-5 pr-5 pt-4" >
         
         {/* Left container */}
-        <div className="logo_text text-3xl small_text_shadow" >ParkPilot</div>
+        <div className="logo_text text-3xl small_text_shadow" onClick={() => router.replace('/')} >ParkPilot</div>
         
         {/* Right Container */}
         <div className="" onClick={() => signOut()} >

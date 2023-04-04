@@ -5,7 +5,16 @@
 @layer components{
     .logo_text{
         @apply text-[#e4c83a] text-9xl font-extrabold text_shadow no_text_select
-    }    
+    }
+    .title_text{
+      @apply text-slate-200 text-5xl mt-5 font-extrabold no_text_select
+    }
+    .form_title{
+      @apply text-lg font-bold text-[#E6CC48]
+    }
+    .form_box{
+      @apply p-2 rounded-sm text-base font-medium
+    }   
 }
 
 /* width */
